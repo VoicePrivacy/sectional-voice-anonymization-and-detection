@@ -1,0 +1,303 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Investigation into voice protection preserving human perception by speech generation</title>
+    <link rel="shortcut icon" href="https://vancycici.github.io/fbdecode/img/ms.jpg">
+    <link rel="icon" href="https://vancycici.github.io/fbdecode/img/ms.jpg">
+    <link rel="apple-touch-icon" href="https://vancycici.github.io/fbdecode/img/ms.jpg">
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; max-width: 1200px; margin: 0 auto; padding: 20px; }
+        article header h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
+        .abstract { background: #f8f9fa; padding: 15px; border-radius: 8px; margin: 20px 0; line-height: 1.6; }
+        h2 { color: #3498db; margin-top: 30px; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { padding: 12px; text-align: left; border-bottom: 1px solid #ddd; }
+        th { background-color: #3498db; color: white; }
+        audio { width: 200px; }
+    </style>
+</head>
+<body>
+
+<article>
+    <header>
+        <h1>An Anonymizer of High Uniqueness and Efficiency in Voice Anonymization</h1>
+    </header>
+</article>
+
+<div class="abstract">
+    <b>Abstract:</b>  Pseudo-speaker construction presents a fundamental challenge in the state-of-the-art voice anonymization technique, which is based on substituting original speaker attributes with those of a pseudo-speaker. However, current pseudo-speaker construction methods are limited in the uniqueness of pseudo-speakers and computational efficiency. To this end, this paper proposes a feedforward network that maps speaker identities to speaker vectors, achieving pseudo-speaker uniqueness by assigning a distinct identity to each pseudo-speaker. Experimental results obtained from the LibriSpeech dataset demonstrated the effectiveness of the proposed method in enhancing the uniqueness of pseudo-speakers, thereby improving the voice privacy protection capability. Furthermore, the feedforward architecture significantly enhances computational efficiency compared to existing model-based pseudo-speaker generation methods.
+</div>
+
+<br/>
+<br/>
+<br/>
+
+Here, we showcase five kinds of anonymized speech:
+(1) RS; (2) Average; (3) PSD; (4) GAN; (5) Proposed
+
+<h2>Libri-Dev Male</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Audio Name</th>
+            <th>RS</th>         <!-- 对应第1种方法 -->
+            <th>Average</th>    <!-- 对应第2种方法 -->
+            <th>PSD</th>        <!-- 对应第3种方法 -->
+            <th>GAN</th>        <!-- 对应第4种方法 -->
+            <th>Proposed</th>   <!-- 对应第5种方法 -->
+        </tr>
+    </thead>
+    <tbody>
+        <!-- 第一行 -->
+        <tr>
+            <td>174-50561-0000</td>
+            <td>
+                <audio controls>
+                    <source src="RS/libri-dev/male/174-50561-0000.wav">
+                </audio>
+            </td>
+            <td>
+                <audio controls>
+                    <source src="average/libri-dev/male/174-50561-0000.wav">
+                </audio>
+            </td>
+            <td>
+                <audio controls>
+                    <source src="psd/libri-dev/male/174-50561-0000.wav">
+                </audio>
+            </td>
+            <td>
+                <audio controls>
+                    <source src="gan/libri-dev/male/174-50561-0000.wav">
+                </audio>
+            </td>
+            <td>
+                <audio controls>
+                    <source src="U2SAnon/libri-dev/male/174-50561-0000.wav">
+                </audio>
+            </td>
+        </tr>
+        <!-- 第二行 -->
+        <tr>
+            <td>251-136532-0000</td>
+            <td>
+                <audio controls>
+                    <source src="RS/libri-dev/male/251-136532-0000.wav">
+                </audio>
+            </td>
+            <td>
+                <audio controls>
+                    <source src="average/libri-dev/male/251-136532-0000.wav">
+                </audio>
+            </td>
+            <td>
+                <audio controls>
+                    <source src="psd/libri-dev/male/251-136532-0000.wav">
+                </audio>
+            </td>
+            <td>
+                <audio controls>
+                    <source src="gan/libri-dev/male/251-136532-0000.wav">
+                </audio>
+            </td>
+            <td>
+                <audio controls>
+                    <source src="U2SAnon/libri-dev/male/251-136532-0000.wav">
+                </audio>
+            </td>
+        </tr>
+        <!-- 第三行 -->
+        <tr>
+            <td>174-50561-0001</td>
+            <td>
+                <audio controls>
+                    <source src="RS/libri-dev/male/174-50561-0001.wav">
+                </audio>
+            </td>
+            <td>
+                <audio controls>
+                    <source src="average/libri-dev/male/174-50561-0001.wav">
+                </audio>
+            </td>
+            <td>
+                <audio controls>
+                    <source src="psd/libri-dev/male/174-50561-0001.wav">
+                </audio>
+            </td>
+            <td>
+                <audio controls>
+                    <source src="gan/libri-dev/male/174-50561-0001.wav">
+                </audio>
+            </td>
+            <td>
+                <audio controls>
+                    <source src="U2SAnon/libri-dev/male/174-50561-0001.wav">
+                </audio>
+            </td>
+        </tr>
+        <!-- 第四行 -->
+        <tr>
+            <td>251-136532-0001</td>
+            <td>
+                <audio controls>
+                    <source src="RS/libri-dev/male/251-136532-0001.wav">
+                </audio>
+            </td>
+            <td>
+                <audio controls>
+                    <source src="average/libri-dev/male/251-136532-0001.wav">
+                </audio>
+            </td>
+            <td>
+                <audio controls>
+                    <source src="psd/libri-dev/male/251-136532-0001.wav">
+                </audio>
+            </td>
+            <td>
+                <audio controls>
+                    <source src="gan/libri-dev/male/251-136532-0001.wav">
+                </audio>
+            </td>
+            <td>
+                <audio controls>
+                    <source src="U2SAnon/libri-dev/male/251-136532-0001.wav">
+                </audio>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>Libri-Dev Female</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Audio Name</th>
+            <th>RS</th>         <!-- 对应第1种方法 -->
+            <th>Average</th>    <!-- 对应第2种方法 -->
+            <th>PSD</th>        <!-- 对应第3种方法 -->
+            <th>GAN</th>        <!-- 对应第4种方法 -->
+            <th>Proposed</th>   <!-- 对应第5种方法 -->
+        </tr>
+    </thead>
+    <tbody>
+        <!-- 第一行 -->
+        <tr>
+            <td>1462-170142-0000</td>
+            <td>
+                <audio controls>
+                    <source src="RS/libri-dev/female/1462-170142-0000.wav">
+                </audio>
+            </td>
+            <td>
+                <audio controls>
+                    <source src="average/libri-dev/female/1462-170142-0000.wav">
+                </audio>
+            </td>
+            <td>
+                <audio controls>
+                    <source src="psd/libri-dev/female/1462-170142-0000.wav">
+                </audio>
+            </td>
+            <td>
+                <audio controls>
+                    <source src="gan/libri-dev/female/1462-170142-0000.wav">
+                </audio>
+            </td>
+            <td>
+                <audio controls>
+                    <source src="U2SAnon/libri-dev/female/1462-170142-0000.wav">
+                </audio>
+            </td>
+        </tr>
+        <!-- 第二行 -->
+        <tr>
+            <td>84-121550-0000</td>
+            <td>
+                <audio controls>
+                    <source src="RS/libri-dev/female/84-121550-0000.wav">  <!-- 修正为female目录 -->
+                </audio>
+            </td>
+            <td>
+                <audio controls>
+                    <source src="average/libri-dev/female/84-121550-0000.wav">
+                </audio>
+            </td>
+            <td>
+                <audio controls>
+                    <source src="psd/libri-dev/female/84-121550-0000.wav">
+                </audio>
+            </td>
+            <td>
+                <audio controls>
+                    <source src="gan/libri-dev/female/84-121550-0000.wav">
+                </audio>
+            </td>
+            <td>
+                <audio controls>
+                    <source src="U2SAnon/libri-dev/female/84-121550-0000.wav">
+                </audio>
+            </td>
+        </tr>
+        <!-- 第三行 -->
+        <tr>
+            <td>1462-170142-0001</td>
+            <td>
+                <audio controls>
+                    <source src="RS/libri-dev/female/1462-170142-0001.wav">  <!-- 修正错误的Farthest路径 -->
+                </audio>
+            </td>
+            <td>
+                <audio controls>
+                    <source src="average/libri-dev/female/1462-170142-0001.wav">
+                </audio>
+            </td>
+            <td>
+                <audio controls>
+                    <source src="psd/libri-dev/female/1462-170142-0001.wav">
+                </audio>
+            </td>
+            <td>
+                <audio controls>
+                    <source src="gan/libri-dev/female/1462-170142-0001.wav">
+                </audio>
+            </td>
+            <td>
+                <audio controls>
+                    <source src="U2SAnon/libri-dev/female/1462-170142-0001.wav">
+                </audio>
+            </td>
+        </tr>
+        <!-- 第四行 -->
+        <tr>
+            <td>84-121550-0001</td>
+            <td>
+                <audio controls>
+                    <source src="RS/libri-dev/female/84-121550-0001.wav">
+                </audio>
+            </td>
+            <td>
+                <audio controls>
+                    <source src="average/libri-dev/female/84-121550-0001.wav">
+                </audio>
+            </td>
+            <td>
+                <audio controls>
+                    <source src="psd/libri-dev/female/84-121550-0001.wav">
+                </audio>
+            </td>
+            <td>
+                <audio controls>
+                    <source src="gan/libri-dev/female/84-121550-0001.wav">
+                </audio>
+            </td>
+            <td>
+                <audio controls>
+                    <source src="U2SAnon/libri-dev/female/84-121550-0001.wav">
+                </audio>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
