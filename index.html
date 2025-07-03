@@ -15,21 +15,18 @@
       font-size: 20px;
       margin-top: 30px;
     }
-    .section {
+    table {
+      width: 100%;
+      border-collapse: collapse;
       margin-bottom: 30px;
     }
-    .audio-row {
-      display: flex;
-      align-items: flex-start;
-      margin-bottom: 15px;
+    th, td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      text-align: center;
     }
-    .audio-block {
-      margin-right: 20px;
-      width: 22%;
-    }
-    .audio-block strong {
-      display: block;
-      margin-bottom: 5px;
+    th {
+      background-color: #f2f2f2;
     }
     audio {
       width: 100%;
@@ -48,124 +45,86 @@
     with distinct pseudo-speakers in each section. Subsequently, a detection algorithm is proposed to decide the
     presence of multiple pseudo-speakers in anonymized speech. Experimental results on the LibriSpeech dataset
     demonstrated that the sectional anonymization method was able to enhance voice privacy protection capability.
-
-    Here, we showcase fourkinds of anonymized speech:
   </p>
 
   <h2>Libri-Dev Female</h2>
-  <div class="section">
-    <div class="audio-row">
-      <div class="audio-block">
-        <strong>Original: 1462-170142-0026</strong>
-        <audio controls src="original audio/female/single/1462-170142-0026.wav"></audio>
-      </div>
-      <div class="audio-block">
-        <strong>Single: 1462-170142-0026</strong>
-        <audio controls src="audio sample/female/single/1462-170142-0026.wav"></audio>
-      </div>
-      <div class="audio-block">
-        <strong>Original: 1462-170138-0005</strong>
-        <audio controls src="original audio/female/multi/1462-170138-0005.wav"></audio>
-      </div>
-      <div class="audio-block">
-        <strong>Multi: 1462-170138-0005</strong>
-        <audio controls src="audio sample/female/multi/1462-170138-0005.wav"></audio>
-      </div>
-    </div>
-    <div class="audio-row">
-      <div class="audio-block">
-        <strong>Original: 1462-170142-0031</strong>
-        <audio controls src="original audio/female/single/1462-170142-0031.wav"></audio>
-      </div>
-      <div class="audio-block">
-        <strong>Single: 1462-170142-0031</strong>
-        <audio controls src="audio sample/female/single/1462-170142-0031.wav"></audio>
-      </div>
-      <div class="audio-block">
-        <strong>Original: 1462-170142-0019</strong>
-        <audio controls src="original audio/female/multi/1462-170142-0019.wav"></audio>
-      </div>
-      <div class="audio-block">
-        <strong>Multi: 1462-170142-0019</strong>
-        <audio controls src="audio sample/female/multi/1462-170142-0019.wav"></audio>
-      </div>
-    </div>
-    <div class="audio-row">
-      <div class="audio-block">
-        <strong>Original: 1462-170145-0004</strong>
-        <audio controls src="original audio/female/single/1462-170145-0004.wav"></audio>
-      </div>
-      <div class="audio-block">
-        <strong>Single: 1462-170145-0004</strong>
-        <audio controls src="audio sample/female/single/1462-170145-0004.wav"></audio>
-      </div>
-      <div class="audio-block">
-        <strong>Original: 1462-170142-0033</strong>
-        <audio controls src="original audio/female/multi/1462-170142-0033.wav"></audio>
-      </div>
-      <div class="audio-block">
-        <strong>Multi: 1462-170142-0033</strong>
-        <audio controls src="audio sample/female/multi/1462-170142-0033.wav"></audio>
-      </div>
-    </div>
-  </div>
+  <table>
+    <thead>
+      <tr>
+        <th>Audio Name</th>
+        <th>Original</th>
+        <th>Single</th>
+        <th>Audio Name</th>
+        <th>Original</th>
+        <th>Multi</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1462-170142-0026</td>
+        <td><audio controls src="original audio/female/single/1462-170142-0026.wav"></audio></td>
+        <td><audio controls src="audio sample/female/single/1462-170142-0026.wav"></audio></td>
+        <td>1462-170138-0005</td>
+        <td><audio controls src="original audio/female/multi/1462-170138-0005.wav"></audio></td>
+        <td><audio controls src="audio sample/female/multi/1462-170138-0005.wav"></audio></td>
+      </tr>
+      <tr>
+        <td>1462-170142-0031</td>
+        <td><audio controls src="original audio/female/single/1462-170142-0031.wav"></audio></td>
+        <td><audio controls src="audio sample/female/single/1462-170142-0031.wav"></audio></td>
+        <td>1462-170142-0019</td>
+        <td><audio controls src="original audio/female/multi/1462-170142-0019.wav"></audio></td>
+        <td><audio controls src="audio sample/female/multi/1462-170142-0019.wav"></audio></td>
+      </tr>
+      <tr>
+        <td>1462-170145-0004</td>
+        <td><audio controls src="original audio/female/single/1462-170145-0004.wav"></audio></td>
+        <td><audio controls src="audio sample/female/single/1462-170145-0004.wav"></audio></td>
+        <td>1462-170142-0033</td>
+        <td><audio controls src="original audio/female/multi/1462-170142-0033.wav"></audio></td>
+        <td><audio controls src="audio sample/female/multi/1462-170142-0033.wav"></audio></td>
+      </tr>
+    </tbody>
+  </table>
 
   <h2>Libri-Dev Male</h2>
-  <div class="section">
-    <div class="audio-row">
-      <div class="audio-block">
-        <strong>Original: 251-136532-0017</strong>
-        <audio controls src="original audio/male/single/251-136532-0017.wav"></audio>
-      </div>
-      <div class="audio-block">
-        <strong>Single: 251-136532-0017</strong>
-        <audio controls src="audio sample/male/single/251-136532-0017.wav"></audio>
-      </div>
-      <div class="audio-block">
-        <strong>Original: 251-136532-0013</strong>
-        <audio controls src="original audio/male/multi/251-136532-0013.wav"></audio>
-      </div>
-      <div class="audio-block">
-        <strong>Multi: 251-136532-0013</strong>
-        <audio controls src="audio sample/male/multi/251-136532-0013.wav"></audio>
-      </div>
-    </div>
-    <div class="audio-row">
-      <div class="audio-block">
-        <strong>Original: 251-137823-0025</strong>
-        <audio controls src="original audio/male/single/251-137823-0025.wav"></audio>
-      </div>
-      <div class="audio-block">
-        <strong>Single: 251-137823-0025</strong>
-        <audio controls src="audio sample/male/single/251-137823-0025.wav"></audio>
-      </div>
-      <div class="audio-block">
-        <strong>Original: 251-136532-0016</strong>
-        <audio controls src="original audio/male/multi/251-136532-0016.wav"></audio>
-      </div>
-      <div class="audio-block">
-        <strong>Multi: 251-136532-0016</strong>
-        <audio controls src="audio sample/male/multi/251-136532-0016.wav"></audio>
-      </div>
-    </div>
-    <div class="audio-row">
-      <div class="audio-block">
-        <strong>Original: 422-122949-0001</strong>
-        <audio controls src="original audio/male/single/422-122949-0001.wav"></audio>
-      </div>
-      <div class="audio-block">
-        <strong>Single: 422-122949-0001</strong>
-        <audio controls src="audio sample/male/single/422-122949-0001.wav"></audio>
-      </div>
-      <div class="audio-block">
-        <strong>Original: 251-137823-0010</strong>
-        <audio controls src="original audio/male/multi/251-137823-0010.wav"></audio>
-      </div>
-      <div class="audio-block">
-        <strong>Multi: 251-137823-0010</strong>
-        <audio controls src="audio sample/male/multi/251-137823-0010.wav"></audio>
-      </div>
-    </div>
-  </div>
+  <table>
+    <thead>
+      <tr>
+        <th>Audio Name</th>
+        <th>Original</th>
+        <th>Single</th>
+        <th>Audio Name</th>
+        <th>Original</th>
+        <th>Multi</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>251-136532-0017</td>
+        <td><audio controls src="original audio/male/single/251-136532-0017.wav"></audio></td>
+        <td><audio controls src="audio sample/male/single/251-136532-0017.wav"></audio></td>
+        <td>251-136532-0013</td>
+        <td><audio controls src="original audio/male/multi/251-136532-0013.wav"></audio></td>
+        <td><audio controls src="audio sample/male/multi/251-136532-0013.wav"></audio></td>
+      </tr>
+      <tr>
+        <td>251-137823-0025</td>
+        <td><audio controls src="original audio/male/single/251-137823-0025.wav"></audio></td>
+        <td><audio controls src="audio sample/male/single/251-137823-0025.wav"></audio></td>
+        <td>251-136532-0016</td>
+        <td><audio controls src="original audio/male/multi/251-136532-0016.wav"></audio></td>
+        <td><audio controls src="audio sample/male/multi/251-136532-0016.wav"></audio></td>
+      </tr>
+      <tr>
+        <td>422-122949-0001</td>
+        <td><audio controls src="original audio/male/single/422-122949-0001.wav"></audio></td>
+        <td><audio controls src="audio sample/male/single/422-122949-0001.wav"></audio></td>
+        <td>251-137823-0010</td>
+        <td><audio controls src="original audio/male/multi/251-137823-0010.wav"></audio></td>
+        <td><audio controls src="audio sample/male/multi/251-137823-0010.wav"></audio></td>
+      </tr>
+    </tbody>
+  </table>
 </body>
 </html>
